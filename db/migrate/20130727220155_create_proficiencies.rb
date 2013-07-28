@@ -1,9 +1,9 @@
-class CreateSkillsUsers < ActiveRecord::Migration
+class CreateProficiencies < ActiveRecord::Migration
   def change
-    create_table :skills_users do |t|
-      t.integer :user_id
-      t.integer :skill_id
-      t.integer :proficiency
+    create_table :proficiencies do |t|
+      t.references :user_id
+      t.references :skill_id
+      t.integer :rating
       t.timestamps
     end
   end

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
   # Remember to create a migration!
-  has_and_belongs_to_many :skills
+  has_many :proficiencies
+  has_many :skills, :through => :proficiencies
 end
